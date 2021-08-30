@@ -1,0 +1,29 @@
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+	ui = true
+[user]
+	name = jlelarge
+	email = julien.lelarge-ext@transport.alstom.com
+[alias]
+	ci = commit
+	co = checkout
+	st = status
+	br = branch
+	df = difftool
+	hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+[core]
+	pager = less -r
+[diff]
+    	tool = meld
+	guitool = meld
+[difftool]
+	prompt = false
+[difftool "meld"]
+    	cmd = meld "$LOCAL" "$REMOTE"
+[merge]
+    	tool = meld
+[mergetool "meld"]
+    	cmd = meld "$LOCAL" "$MERGED" "$REMOTE" --output "$MERGED"
+    	#cmd = meld "$LOCAL" "$BASE" "$REMOTE" --output "$MERGED"

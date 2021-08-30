@@ -1,0 +1,15 @@
+# Screenrc
+
+screen -t General
+chdir $HOME
+select General
+
+# Commands
+
+backtick 1 0 0 /home/$USER/bin/hddtemp_monitor.sh
+backtick 2 0 0 /home/$USER/bin/freemem_monitor.sh
+backtick 3 0 0 /home/$USER/bin/cpuload_monitor.sh
+
+hardstatus alwayslastline                                                                                                  
+hardstatus string '%{= kW}[ %{= ky}%H%{= kW} ][%= %{= kW}%?%-Lw%?%{= kW}%n*%f %t%?%?%{= kW}%?%+Lw%?%?%= ][ %{kc}%1`%{kW} ][ %{kg}%2`%{kW} ][ %{ky}%3`%{kW} ][ %{kr}%d/%m/%y %c:%s%{kW} ]%{kW}'
+
